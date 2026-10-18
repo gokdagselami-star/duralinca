@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>Ödeme</title>
+<script>
+var p = "www.amazon.com.tr/checkout/entry/cart?proceedToRetailCheckout=Proceed+to+checkout";
+var web = "https://" + p;
+if (/Android/i.test(navigator.userAgent)) {
+  location.href = "intent://" + p + "#Intent;scheme=com.amazon.mobile.shopping.web;" +
+    "package=com.amazon.mShop.android.shopping;S.browser_fallback_url=" + encodeURIComponent(web) + ";end";
+} else { location.href = web; }
+</script>
+<p style="font:20px sans-serif;text-align:center;margin-top:40vh">
+<a href="https://www.amazon.com.tr/checkout/entry/cart?proceedToRetailCheckout=Proceed+to+checkout">Ödemeye geç</a></p>
